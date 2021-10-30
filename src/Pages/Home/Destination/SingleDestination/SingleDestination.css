@@ -11,7 +11,7 @@
   
 }
 .singleDes:hover{
-  box-shadow: 10px 10px 10px  rgb(204, 202, 202);
+  box-shadow: 5px 1px rgb(223, 218, 218);
 }
 .card{
   cursor: zoom-in;
@@ -55,6 +55,7 @@
     margin-bottom: 10px;
     font-size: 18px;
 }
+
 .book-now-btn {
   background-color:rgb(121, 71, 30);
   position: absolute;
@@ -66,7 +67,7 @@
   text-align: left;
   border-radius: 20px;
   outline: 1px solid rgb(196, 126, 70);
-  width: 165px;
+  width: 160px;
   text-align: center;
   margin: 16px auto;
   top: 360px;

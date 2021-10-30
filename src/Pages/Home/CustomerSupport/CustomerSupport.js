@@ -7,6 +7,7 @@ const CustomerSupport = () => {
       <div className="support row py-5">
         <div className="col-lg-8 col-md-6 col-12">
           <p className="fw-bold fs-1 mb-4 ">24/7 Customer Support</p>
+          <hr className="hr text-secondary" />
           <p>
             Our team of experienced tour specialists have travelled to hundreds
             of countries around the globe and have decades of first-hand travel

@@ -2,31 +2,43 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import AuthProvider from "./Pages/Context/AuthProvider";
 import Error from "./Pages/Error/Error";
 import Destinations from "./Pages/Home/Destinations/Destinations";
 import Home from "./Pages/Home/Home";
+import Login from "./Pages/Login/Login";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/destinations">
-            <Destinations></Destinations>
-          </Route>
-          <Route exact path="*">
-            <Error></Error>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <PrivateRoute path="/destinations">
+              <Destinations></Destinations>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route exact path="*">
+              <Error></Error>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

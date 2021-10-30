@@ -14,7 +14,7 @@ const SingleDestination = (props) => {
     discount,
   } = props.destination;
   return (
-    <div className="col-lg-3  col-md-6 col-12 my-4">
+    <div className="col-lg-3 col-md-6 col-12 my-4">
       <div className=" singleDes">
         <div className="card  ">
           <img src={img} className="card-img-top" alt="..." />
@@ -41,7 +41,7 @@ const SingleDestination = (props) => {
               <i class="fas fa-heart"></i>
             </div>
           </div>
-          <button className="book-now-btn">BOOK NOW</button>
+          <button className="book-now-btn">BOOK NOW </button>
         </div>
       </div>
     </div>
