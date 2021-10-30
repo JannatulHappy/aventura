@@ -1,0 +1,33 @@
+.nav {
+  background-color: rgb(8, 8, 8);
+  opacity: 0.85;
+  padding: 34px 10px;
+}
+
+nav .nav-item {
+  color: white;
+
+  font-weight: 500;
+  list-style: none;
+  margin-left: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+}
+nav .nav-item:hover {
+  color:#d65f24;
+}
+nav .nav-item:active {
+  color: #bd5f31;
+}
+
+#toggle{
+    color:#dc8051;
+}
+#toggle .fa-sliders-h{
+  color:#dc8051;
+  font-size: 30px;
+  font-weight: 900;
+}

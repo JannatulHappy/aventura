@@ -1,0 +1,22 @@
+.destinations{
+    background-color: rgb(255, 251, 247);
+}
+.destination-container{
+    
+width: 86%;
+margin:  auto;
+}
+.destination-container .title{
+    font-size:30px;
+    font-weight: bold;
+}
+.destination-container .sub-title{
+    color:peru;
+    font-size: 18px;
+}
+.hr{
+    margin-left: 15px;
+    width: 90px;
+    border-bottom: 5px solid orangered;
+    color:orangered;
+}

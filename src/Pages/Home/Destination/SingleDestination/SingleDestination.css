@@ -1,0 +1,74 @@
+.card {
+  height: 430px;
+  border-radius: 20px;
+  position: relative;
+ 
+  background-color: rgb(253, 247, 241);
+ 
+}
+.singleDes{
+  overflow: hidden;
+  
+}
+.singleDes:hover{
+  box-shadow: 10px 10px 10px  rgb(204, 202, 202);
+}
+.card{
+  cursor: zoom-in;
+  transition: transform 0.5s ease;
+}
+.card:hover {
+  transform: scale(1.075);
+}
+.card img {
+  border-radius: 20px;
+  padding: 4px;
+  height: 180px;
+}
+.discount {
+  position: absolute;
+  top: 20px;
+}
+.discount p {
+  background-color: rgb(151, 93, 46);;
+  text-align: center;
+  color: white;
+  font-family: 900;
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 16px;
+}
+.discount-price {
+  margin-left: 5px;
+  color: rgb(180, 92, 21);
+}
+.fa-heart {
+  margin-left: 135px;
+  color: rgb(151, 93, 46);
+  font-size: 32px;
+  text-align: center;
+
+  border-radius: 25px;
+}
+.fa-star{
+    color:rgb(173, 120, 84);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.book-now-btn {
+  background-color:rgb(121, 71, 30);
+  position: absolute;
+  font-size: 16px;
+  color: rgb(231, 226, 226);
+  border: 1px solid rgb(95, 55, 23);
+  font-weight: 600;
+  padding: 9px 0px;
+  text-align: left;
+  border-radius: 20px;
+  outline: 1px solid rgb(196, 126, 70);
+  width: 165px;
+  text-align: center;
+  margin: 12px auto;
+  top: 360px;
+  left: 60px;
+}

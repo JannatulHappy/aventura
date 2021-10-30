@@ -1,0 +1,23 @@
+.destination-banner{
+    background-image: url(../../../assets/banner-3.jpg);
+    width: 100vw;
+    height: 270px;
+    background-position:top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.destination-banner .title{
+    margin-top: 50px;
+    font-weight: 900;
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    color: #91593d
+    
+}
+.destination-banner .sub-title{
+    text-align: center;
+    color: #5f4132;
+}
