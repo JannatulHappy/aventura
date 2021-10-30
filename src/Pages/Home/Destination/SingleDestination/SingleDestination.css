@@ -2,18 +2,14 @@
   height: 435px;
   border-radius: 20px;
   position: relative;
- 
+
   background-color: rgb(253, 247, 241);
- 
 }
-.singleDes{
+.singleDes {
   overflow: hidden;
-  
 }
-.singleDes:hover{
-  box-shadow: 5px 1px rgb(223, 218, 218);
-}
-.card{
+
+.card {
   cursor: zoom-in;
   transition: transform 0.5s ease;
 }
@@ -30,7 +26,7 @@
   top: 20px;
 }
 .discount p {
-  background-color: rgb(151, 93, 46);;
+  background-color: rgb(151, 93, 46);
   text-align: center;
   color: white;
   font-family: 900;
@@ -50,14 +46,14 @@
 
   border-radius: 25px;
 }
-.fa-star{
-    color:rgb(173, 120, 84);
-    margin-bottom: 10px;
-    font-size: 18px;
+.fa-star {
+  color: rgb(173, 120, 84);
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .book-now-btn {
-  background-color:rgb(121, 71, 30);
+  background-color: rgb(121, 71, 30);
   position: absolute;
   font-size: 16px;
   color: rgb(231, 226, 226);
