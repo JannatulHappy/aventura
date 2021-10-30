@@ -21,8 +21,9 @@ const Footer = () => {
             design will help you to own an awesome travel site for your
             business.
           </p>
-          <div className="col-md-4 col-6 ps-5">
-            <ul className="icon list-unstyled ">
+         <div className="row pe-5">
+         <div className="col-12 text-center mt-4">
+          <ul className="icon list-unstyled d-flex ">
               <li>
                 <i className="fab fa-facebook-f"></i>
               </li>
@@ -37,6 +38,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+         </div>
         </div>
         <div className="col-md-6 col-lg-3 col-12  ">
           <h3 className="footer-title">Quick Link</h3>
@@ -68,7 +70,9 @@ const Footer = () => {
           <p className="footer-text">
             Contact us now for a quote about consultation ( Available 24/7 )
           </p>
+         
         </div>
+       
         <hr className="text-warning my-5" />
         <div className="row">
           <div className="col-lg-9 col-md-6 col-1"></div>
@@ -80,7 +84,7 @@ const Footer = () => {
             <img src={PaypalImg} alt="" />
           </div>
         </div>
-        <hr className="text-warning mt-5" />
+        
         <p className="footer-last-text text-center mt-5">
           © 2021 -Adventura. All right reserved.
         </p>

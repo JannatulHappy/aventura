@@ -1,0 +1,12 @@
+.success-container{
+    background-color: rgb(245, 243, 243);
+}
+.blank{
+    height: 70px;
+    opacity: 0.88;
+    background-color:#dc8051;
+}
+.success{
+    width: 80%;
+    margin: 0 auto;
+}

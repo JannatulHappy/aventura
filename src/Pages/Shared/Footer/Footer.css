@@ -12,7 +12,21 @@
   .footer-text {
     color: rgb(194, 185, 185);
   }
- 
+  .icon{
+    align-items: center;
+    justify-content: center;
+  }
+ .icon .fab {
+  color: #381c0b;
+  
+  background-color: rgb(238, 224, 224);
+  margin-top: 8px;
+  margin-left: 10px;
+  padding: 11px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 500;
+}
   .payment img{
     width:44px;
     height: 30px;

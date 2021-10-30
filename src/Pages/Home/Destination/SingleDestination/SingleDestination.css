@@ -1,5 +1,5 @@
 .card {
-  height: 430px;
+  height: 435px;
   border-radius: 20px;
   position: relative;
  
@@ -68,7 +68,7 @@
   outline: 1px solid rgb(196, 126, 70);
   width: 165px;
   text-align: center;
-  margin: 12px auto;
+  margin: 16px auto;
   top: 360px;
   left: 60px;
 }
