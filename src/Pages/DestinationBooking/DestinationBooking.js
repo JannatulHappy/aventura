@@ -18,7 +18,7 @@ const DestinationBooking = () => {
   } = useForm();
   const onSubmit = (data) => {
     data.status = "pending";
-    fetch(`https://secure-hamlet-63845.herokuapp.com//addBooking`, {
+    fetch(`https://secure-hamlet-63845.herokuapp.com/addBooking`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -40,7 +40,7 @@ const DestinationBooking = () => {
   };
 
   useEffect(() => {
-    fetch(`https://secure-hamlet-63845.herokuapp.com//${destinationId}`)
+    fetch(`https://secure-hamlet-63845.herokuapp.com/singleDestination/${destinationId}`)
       .then((res) => res.json())
       .then((data) => setDestination(data));
   }, [destinationId]);
@@ -48,7 +48,6 @@ const DestinationBooking = () => {
     countryName,
     destinationName,
     img,
-    _id,
     des,
     duration,
     discount,
@@ -116,13 +115,7 @@ const DestinationBooking = () => {
               <div className="booking-form  ">
               <p className="fs-3 ps-3 fw-bold my-4">Book Your Destinations</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                  <input
-                    type="text"
-                    className="p-2 m-2"
-                    defaultValue={_id}
-                    {...register("destinationId", { required: true })}
-                  />
-                  <br />
+                 
 
                   <input
                     type="text"
@@ -136,6 +129,13 @@ const DestinationBooking = () => {
                     className="p-2 m-2"
                     defaultValue={user.email}
                     {...register("userEmail", { required: true })}
+                  />
+                  <br />
+                  <input
+                    type="text"
+                    className="p-2 m-2"
+                    defaultValue={destinationName}
+                    {...register("destinationName", { required: true })}
                   />
                   <br />
 

@@ -8,6 +8,7 @@ import Error from "./Pages/Error/Error";
 import Destinations from "./Pages/Home/Destinations/Destinations";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import MyBooking from "./Pages/MyBooking/MyBooking";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
@@ -30,6 +31,9 @@ function App() {
             <PrivateRoute path="/destination/:destinationId">
               <DestinationBooking></DestinationBooking>
             </PrivateRoute>
+            <Route path="/myBooking">
+              <MyBooking></MyBooking>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
