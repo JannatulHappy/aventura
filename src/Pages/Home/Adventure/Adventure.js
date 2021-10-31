@@ -2,8 +2,8 @@ import React from "react";
 import "./Adventure.css";
 const Adventure = () => {
   return (
-    <div className="adventure-container">
-      <div className="adventure row mb-5 ">
+    <div className="adventure-container my-5">
+      <div className="adventure row mb-2 ">
         <div className="col-lg-4 col-md-4 col-12 my-5 ps-5">
           <p className="fs-2 fw-bold">Adventure, Your Way</p>
           <p className="text-secondary">

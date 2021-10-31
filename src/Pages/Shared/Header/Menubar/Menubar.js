@@ -1,7 +1,7 @@
 import React from "react";
 import "./Menubar.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logoImg from "../../../../assets/logo-1.png";
 import useAuth from "../../../hooks/useAuth";
 
@@ -14,7 +14,7 @@ const Menubar = () => {
           <img src={logoImg} alt="" />{" "}
         </Navbar.Brand>
         <Navbar.Toggle id="toggle" aria-controls="responsive-navbar-nav">
-          <i class="fas fa-sliders-h"></i>
+          <i className="fas fa-sliders-h"></i>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
@@ -31,27 +31,27 @@ const Menubar = () => {
               Manage All Booking
             </Link>
             <Link className="nav-item pe-2" to="/addDestination">
-              Add Destination 
+              Add Destination
             </Link>
             {user.email && (
-              <span style={{ color: "orange",fontWeight:"900",fontSize:"16px" }}>
-              
+              <span
+                style={{ color: "orange", fontWeight: "900", fontSize: "16px" }}
+              >
                 {user?.displayName}
               </span>
             )}
             {user.email ? (
-            <button
-              onClick={handleLogout}
-              className="ms-2 btn  login-btn text-uppercase"
-            >
-              
-              Logout
-            </button>
-          ) : (
-            <Link className="login-btn text-decoration-none" to="/login">
-              LOGIN
-            </Link>
-          )}
+              <button
+                onClick={handleLogout}
+                className="ms-2 btn  login-btn text-uppercase"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link className="login-btn text-decoration-none" to="/login">
+                LOGIN
+              </Link>
+            )}
 
             <i className="fas fa-shopping-cart text-white mt-2 ms-2 fs-5"></i>
           </Nav>

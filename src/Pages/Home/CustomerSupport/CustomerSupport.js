@@ -8,13 +8,13 @@ const CustomerSupport = () => {
         <div className="col-lg-8 col-md-6 col-12">
           <p className="fw-bold fs-1 mb-4 ">24/7 Customer Support</p>
           <hr className="hr text-secondary" />
-          <p>
+          <p className="text-secondary ">
             Our team of experienced tour specialists have travelled to hundreds
             of countries around the globe and have decades of first-hand travel
             experience to share. Contact us now to have all of your tour-related
             questions answered!
           </p>
-          <button className="btn avantura-btn mt-5 px-5 py-3 fs-5">Contact Us</button>
+          <button className="btn avantura-btn mt-5 px-5 py-2 fs-5">Contact Us</button>
         </div>
         <div className="col-lg-4 col-md-6 col-12 d-flex">
           <img

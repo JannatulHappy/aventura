@@ -1,9 +1,11 @@
 import React from "react";
 import "./SingleDestination.css";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 const SingleDestination = (props) => {
   const {
     img,
+    _id,
     destinationName,
     des,
     duration,
@@ -13,6 +15,7 @@ const SingleDestination = (props) => {
     afterDiscount,
     discount,
   } = props.destination;
+
   return (
     <div className="col-lg-3 col-md-6 col-12 my-4">
       <div className=" singleDes">
@@ -38,10 +41,12 @@ const SingleDestination = (props) => {
             </div>
             <div className="discount d-flex mb-1">
               <p>{discount}</p>
-              <i class="fas fa-heart"></i>
+              <i className="fas fa-heart"></i>
             </div>
           </div>
-          <button className="book-now-btn">BOOK NOW </button>
+          <Link to={`/destination/${_id}`}>
+            <button className="book-now-btn">BOOK NOW </button>
+          </Link>
         </div>
       </div>
     </div>

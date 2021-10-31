@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./Pages/Context/AuthProvider";
+import DestinationBooking from "./Pages/DestinationBooking/DestinationBooking";
 import Error from "./Pages/Error/Error";
 import Destinations from "./Pages/Home/Destinations/Destinations";
 import Home from "./Pages/Home/Home";
@@ -20,11 +21,14 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/home">
+            <Route exact path="/home">
               <Home></Home>
             </Route>
             <PrivateRoute path="/destinations">
               <Destinations></Destinations>
+            </PrivateRoute>
+            <PrivateRoute path="/destination/:destinationId">
+              <DestinationBooking></DestinationBooking>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

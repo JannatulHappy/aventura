@@ -20,7 +20,10 @@ const Destination = () => {
         </p>
         <div className="row g-4 destination">
           {destinations.slice(0, 8).map((destination) => (
-            <SingleDestination destination={destination}></SingleDestination>
+            <SingleDestination
+              destination={destination}
+              key={destination._id}
+            ></SingleDestination>
           ))}
         </div>
       </div>
