@@ -6,6 +6,7 @@ import { Table } from "react-bootstrap";
 const ManageAllBooking = () => {
   const [bookings, setBookings] = useState([]);
   const [control, setControl] = useState(false);
+
   const [status, setStatus] = useState("pending");
   useEffect(() => {
     fetch("https://secure-hamlet-63845.herokuapp.com/allBookings")
@@ -13,8 +14,8 @@ const ManageAllBooking = () => {
       .then((data) => setBookings(data));
   }, [control]);
 
-  const handleApproved = (id,) => {
-    const data= {status:"Approved"}
+  const handleApproved = (id) => {
+    const data = { status: "Approved" };
     fetch(`https://secure-hamlet-63845.herokuapp.com/update/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
@@ -23,7 +24,9 @@ const ManageAllBooking = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.modifiedCount) {
-          setStatus(data.status);
+          
+          setStatus("Approved")
+          alert("Your booking has been approved");
         } else {
           setStatus("pending");
         }
