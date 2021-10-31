@@ -42,7 +42,7 @@ const Menubar = () => {
             
             {user.email && (
               <span
-                style={{ color: "orange", fontWeight: "900", fontSize: "16px" }}
+                style={{ color: "peru", fontWeight: "900", fontSize: "17px" }}
               >
                 {user?.displayName}
               </span>

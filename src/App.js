@@ -2,12 +2,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import AddDestination from "./Pages/AddDestination/AddDestination";
 import AuthProvider from "./Pages/Context/AuthProvider";
 import DestinationBooking from "./Pages/DestinationBooking/DestinationBooking";
 import Error from "./Pages/Error/Error";
 import Destinations from "./Pages/Home/Destinations/Destinations";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import ManageAllBooking from "./Pages/ManageAllBooking/ManageAllBooking";
 import MyBooking from "./Pages/MyBooking/MyBooking";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Register/Register";
@@ -31,9 +33,15 @@ function App() {
             <PrivateRoute path="/destination/:destinationId">
               <DestinationBooking></DestinationBooking>
             </PrivateRoute>
-            <Route path="/myBooking">
+            <PrivateRoute path="/myBooking">
               <MyBooking></MyBooking>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/manageAllBooking">
+             <ManageAllBooking></ManageAllBooking>
+            </PrivateRoute>
+            <PrivateRoute path="/addDestination">
+             <AddDestination></AddDestination>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

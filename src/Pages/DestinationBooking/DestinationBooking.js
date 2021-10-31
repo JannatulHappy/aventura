@@ -140,9 +140,9 @@ const DestinationBooking = () => {
                   <br />
 
                   <input
-                    type="number"
+                    type="text"
                     className="p-2 m-2"
-                    placeholder="Price"
+                    defaultValue={afterDiscount}
                     {...register("price", { required: true })}
                   />
                   <br />

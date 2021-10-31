@@ -19,7 +19,7 @@ const Destination = () => {
           with these stories.
         </p>
         <div className="row g-4 destination">
-          {destinations.slice(0, 8).map((destination) => (
+          {destinations.map((destination) => (
             <SingleDestination
               destination={destination}
               key={destination._id}
