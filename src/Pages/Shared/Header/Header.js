@@ -11,10 +11,9 @@ const Header = () => {
 
       <header>
         <Menubar></Menubar>
-       <div className="overlay">
-       
-        <Banner />
-       </div>
+        <div className="overlay">
+          <Banner />
+        </div>
       </header>
     </div>
   );

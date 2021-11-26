@@ -1,36 +1,33 @@
 import React, { useEffect, useState } from "react";
 import "./ManageAllBooking.css";
 import Menubar from "../Shared/Header/Menubar/Menubar";
-import { Table } from "react-bootstrap";
+import { Table,Button } from "react-bootstrap";
+import axios from "axios";
 
 const ManageAllBooking = () => {
   const [bookings, setBookings] = useState([]);
   const [control, setControl] = useState(false);
-
-  const [status, setStatus] = useState("pending");
   useEffect(() => {
     fetch("https://secure-hamlet-63845.herokuapp.com/allBookings")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, [control]);
 
-  const handleApproved = (id) => {
-    const data = { status: "Approved" };
-    fetch(`https://secure-hamlet-63845.herokuapp.com/update/${id}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.modifiedCount) {
-          
-          setStatus("Approved")
-          alert("Your booking has been approved");
-        } else {
-          setStatus("pending");
-        }
-      });
+  //Handle Status
+  const handleApprove = (id) => {
+    setControl(false);
+    const proceed = window.confirm(
+      "Want to Status shipped the collection from Status Pending??"
+    );
+    if (proceed) {
+      axios
+        .put(`https://secure-hamlet-63845.herokuapp.com/approveBooking/${id}`)
+        .then((result) => {
+          if (result.data.modifiedCount) {
+            setControl(true);
+          }
+        });
+    }
   };
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, u want to delete it?");
@@ -63,7 +60,7 @@ const ManageAllBooking = () => {
                 <thead className="fw-bold fs-5">
                   <tr>
                     <th>#</th>
-                    <th>User Email</th>
+                    <th>User Name</th>
                     <th>Destination</th>
 
                     <th>status</th>
@@ -79,12 +76,15 @@ const ManageAllBooking = () => {
                     <td>{pd.status}</td>
                     <td>{pd?.city}</td>
                     <td>{pd.address}</td>
-                    <button
-                      onClick={() => handleApproved(pd?._id)}
-                      className="btn my-1 fw-bold fs-6 w-75 mx-auto bg-success px-4"
+                    <td>
+                    <Button
+                      variant="success"
+                      className="text-black w-50 fw-bold"
+                      onClick={() => handleApprove(pd._id)}
                     >
-                      Approved
-                    </button>
+                      {pd?.status}
+                    </Button>
+                  </td>
                     <button
                       onClick={() => handleDelete(pd?._id)}
                       className="btn my-1 fw-bold fs-6 w-75 mx-auto bg-danger px-4"

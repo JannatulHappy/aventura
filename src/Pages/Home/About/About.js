@@ -15,7 +15,7 @@ const About = () => {
         </div>
 
         <div className="col-md-12 col-lg-6 my-4 col-12 ps-5 about-right">
-          <img
+          <img className="me-5"
             src="https://cdn.tourradar.com/s3/tour/1500x800/212974_6011422b532c3.jpg"
             alt=""
           />
